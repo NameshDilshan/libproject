@@ -24,7 +24,12 @@ public class IssueController {
 	@PostMapping("/saveIssue")
 	public String saveGuest(@ModelAttribute("issue") Issue issue, Model model) { 
 		System.out.println("Save Issue Triggered");
-		issueRepository.save(issue); 
+		if(issueRepository.existsById(issue.getId())) {
+			issueRepository.update(issue);
+		}else {
+			issueRepository.save(issue);
+		}
+//		issueRepository.save(issue); 
 //		if(issue.getFine() ==  null ) {
 //			return "redirect:/issueManagementDashboard";
 //		}

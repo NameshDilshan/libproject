@@ -20,10 +20,10 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h3 class="mt-4">Student Fine Report</h3>
+                        <h3 class="mt-4">Book Loan History Report</h3>
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item ">Reports</li>
-                            <li class="breadcrumb-item active">Student Fine Report</li>
+                            <li class="breadcrumb-item active">Book Loan History</li>
                         </ol> 
 					<div class="row">
 						<div class="col-md-6">
@@ -91,15 +91,15 @@
 								<table id="datatable" class="table table-striped table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                 	<thead>
                                     	<tr> 
-	                                     	<th>#</th>  
-	                                        <th>Book Title</th>   
-											<th>Book Edition</th> 
-											<th>Book Price</th> 
-											<th>Student Name</th> 
-											<th>Student Mobile</th> 
-											<th>Issued Date</th> 
-											<th>Due Date</th> 
-											<th>Returned Date</th> 
+	                                     	<th>#</th> 
+		                                    <th>ID</th>
+		                                    <th>Book Id</th> 
+		                                    <th>Book Name</th> 
+		                                    <th>Student Register No</th>
+											<th>Student Name</th>
+											<th>Issued Date</th>
+											<th>Due Date</th>
+											<th>Returned Date</th>
 											<th>Fine</th> 
                                         </tr>
                                      </thead>  
@@ -187,15 +187,15 @@
 						Object.keys(val).forEach(function(l){null!=val[l]&&"undefined"!=val[l]&&""!=val[l].length||(val[l]="-")}); 
 						var rowNode = mytable.row.add(
 								[   No,
-									val.book.title,  
-									val.book.edition,
-									val.book.price,
-									val.student.name,
-									val.student.mobile,
+									val.id,
+									val.book_id,
+									val.book_name,
+									val.student_regno,
+									val.student_name,
 									val.issued_date,
 									val.due_date,
 									val.returned_date,
-									val.fine 
+									val.fine   
 									 ]).node();
 						mytable.draw();
 					}

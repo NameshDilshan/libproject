@@ -169,12 +169,13 @@
 			$("#grade").val(map.get(4)); 
 			$("#classname").val(map.get(5)); 
 			$('#'+map.get(6)+'').attr('checked','checked');
-// 			$('#gender option[value=\''+map.get(6)+'\']').attr('checked','checked');
 			$("#email").val(map.get(7)); 
 			$("#mobile").val(map.get(8)); 
 			$("#addStudentModal").modal('show');   
+			$("#regno").prop("readonly", "readonly"); 
         });
-         
+       
+        
         $('.deleteBtn').click(function (e){ 
     		$(this).closest('tr').find('td').each(function(index) {
     		      var textval = $(this).text();

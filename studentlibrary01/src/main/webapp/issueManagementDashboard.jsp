@@ -51,7 +51,7 @@
 						  </div>
 						  <div class="col-md-12">
 						    <label for="book" class="form-label">Book</label>
-							<form:select id="book" path="book" class="form-control">
+							<form:select id="book" path="book_id" class="form-control">
 	<%-- 							<c:choose> --%>
 	<%-- 								<c:when test="${not empty (issue.book)}"> --%>
 	<%-- 									<c:forEach items="${countries}" var="country"> --%>
@@ -69,7 +69,7 @@
 						</div> 
 						<div class="col-md-12">
 						    <label for="student" class="form-label">Student</label>
-							<form:select id="student" path="student" class="form-control">
+							<form:select id="student" path="student_regno" class="form-control">
 	<%-- 							<c:choose> --%>
 	<%-- 								<c:when test="${not empty (issue.book)}"> --%>
 	<%-- 									<c:forEach items="${countries}" var="country"> --%>
@@ -155,9 +155,9 @@
 														<c:set var="count" value="${count + 1}" scope="page" />
 														<td><c:out value="${count}"></c:out></td> 
 														<td><c:out value="${issue.id}"></c:out></td>
-														<td><c:out value="${issue.book.id}"></c:out></td> 
-														<td><c:out value="${issue.book.title}"></c:out></td> 
-														<td><c:out value="${issue.student.name}"></c:out></td> 
+														<td><c:out value="${issue.book_id}"></c:out></td> 
+														<td><c:out value="${issue.book_name}"></c:out></td> 
+														<td><c:out value="${issue.student_name}"></c:out></td> 
 														<td><c:out value="${issue.issued_date}"></c:out></td> 
 														<td><c:out value="${issue.due_date}"></c:out></td> 
 														<td><c:out value="${issue.returned_date}"></c:out></td> 

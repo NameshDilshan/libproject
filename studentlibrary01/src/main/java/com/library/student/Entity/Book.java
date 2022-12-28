@@ -26,8 +26,8 @@ public class Book {
 	private String category;
 	private String price;
 
-	@JsonIgnore
-	@OneToMany(mappedBy = "book", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-	private List<Issue> issueList;
+//	@JsonIgnore
+//	@OneToMany(mappedBy = "book", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+//	private List<Issue> issueList;
 
 }

@@ -3,8 +3,6 @@
  */
 package com.library.student.Controller;
 
-import java.util.UUID;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -27,7 +25,11 @@ public class StudentController {
 	public String saveGuest(@ModelAttribute("student") Student student, Model model) { 
 		System.out.println(student);
 		System.out.println("Save Student Triggered"); 
-		studentRepository.save(student); 
+		if(studentRepository.existsById(student.getRegno())) {
+			studentRepository.update(student);
+		}else {
+			studentRepository.save(student);
+		}
 		return "redirect:/studentManagementDashboard";
 	}
 	

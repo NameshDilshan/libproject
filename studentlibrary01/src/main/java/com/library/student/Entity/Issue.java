@@ -19,9 +19,12 @@ public class Issue {
 	private String returned_date;
 	private String fine;
 	
-	@ManyToOne
-	private Book book;
+	private String student_regno;
+	private String book_id;
 	
-	@ManyToOne
-	private Student student;
+//	@ManyToOne
+//	private Book book;
+	
+//	@ManyToOne
+//	private Student student;
 }

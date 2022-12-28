@@ -28,7 +28,7 @@ public class Student {
 	private String email;
 	private String mobile; 
 	
-	@JsonIgnore
-	@OneToMany(mappedBy = "student", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-	private List<Issue> issueList;
+//	@JsonIgnore
+//	@OneToMany(mappedBy = "student", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+//	private List<Issue> issueList;
 }

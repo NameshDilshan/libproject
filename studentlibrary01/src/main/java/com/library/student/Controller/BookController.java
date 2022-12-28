@@ -21,7 +21,11 @@ public class BookController {
 	@PostMapping("/saveBook")
 	public String saveBook(@ModelAttribute("book") Book book, Model model) { 
 		System.out.println("Save Book Triggered");
-		bookRepository.save(book); 
+		if(bookRepository.existsById(book.getId())) {
+			bookRepository.update(book);
+		}else {
+			bookRepository.save(book);
+		}
 		return "redirect:/bookManagementDashboard";
 	}
 	
